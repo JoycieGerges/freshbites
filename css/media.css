@@ -1,0 +1,16 @@
+@media (min-width: 768px) and (max-width: 1024px) {
+  main.container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .recipe-image-container img {
+    height: 500px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .recipe-image-container img {
+    height: 800px;
+  }
+}

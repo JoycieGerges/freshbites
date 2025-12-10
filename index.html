@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What's For Dinner</title>
+  <link rel="icon" href="images/favicon.png">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+</head>
+
+
+<body style="background-color: #FFF9EC;">
+
+  <!--------------- Start Navbar Section --------------->
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm border-bottom border-warning-subtle py-3 mb-4">
+    <div class="container">
+
+      <div class="d-flex align-items-center gap-3">
+        <div class="orange-circle rounded-circle d-flex justify-content-center align-items-center shadow">
+          <i class="fa-solid fa-utensils text-white fs-5"></i>
+        </div>
+
+        <div>
+          <h4 class="m-0 fw-bold">What's For Dinner</h4>
+          <small class="text-secondary">Your daily meal inspiration</small>
+        </div>
+      </div>
+
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon hover-orange"></span>
+      </button>
+
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex align-items-center gap-lg-3">
+          <li class="nav-item d-none d-lg-block">
+            <a class="nav-link text-secondary hover-orange" href="#"><i class="fa-solid fa-bookmark fs-5"></i></a>
+          </li>
+
+          <li class="nav-item d-none d-lg-block">
+            <a class="nav-link text-secondary hover-orange" href="#"><i
+                class="fa-solid fa-clock-rotate-left fs-5"></i></a>
+          </li>
+
+          <li class="nav-item d-none d-lg-block">
+            <a class="nav-link text-secondary hover-orange" href="#"><i class="fa-solid fa-gear fs-5"></i></a>
+          </li>
+
+          <li class="nav-item d-none d-lg-block">
+            <img src="images/avatar.jpg" class="rounded-circle border border-warning image-style">
+          </li>
+
+
+          <ul class="navbar-nav me-auto ms-0 mt-3 text-start">
+
+            <li class="nav-item d-lg-none">
+              <a class="nav-link hover-orange" href="#">
+                <i class="fa-solid fa-bookmark me-2"></i> Saved Recipes
+              </a>
+            </li>
+
+            <li class="nav-item d-lg-none">
+              <a class="nav-link hover-orange" href="#">
+                <i class="fa-solid fa-clock-rotate-left me-2"></i> Recent
+              </a>
+            </li>
+
+            <li class="nav-item d-lg-none">
+              <a class="nav-link hover-orange" href="#">
+                <i class="fa-solid fa-gear me-2"></i> Settings
+              </a>
+            </li>
+
+            <li class="nav-item d-lg-none d-flex align-items-center">
+              <img src="images/avatar.jpg" class="rounded-circle border border-warning me-2 image2-style">
+              <span>Profile</span>
+            </li>
+
+          </ul>
+
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+  <!--------------- End Navbar Section --------------->
+
+
+
+  <!--------------- Start Main-Content Section --------------->
+  <main class="container p-xs-5 p-lg-5">
+
+    <section class="bg-white shadow-xl overflow-hidden  border border-orange-100 rounded-4">
+      <div class="row">
+
+        <div class="col-lg-5 recipe-image-container">
+
+          <img id="recipe-image" src="images/Beef-tacos.png" class="img-fluid" alt="Beef Tacos">
+
+          <div class="rating">
+            <i class="fas fa-star text-warning"></i>
+            <span id="rating-value" class="fw-bold">4.6</span>
+            <span id="reviews-count" class="text-muted">(278 reviews)</span>
+          </div>
+
+          <div class="info-card">
+            <div>
+              <i class="fas fa-clock mb-2 fs-4" style="color: #FF6900;"></i>
+              <p class="mb-0 text-secondary">Prep Time</p>
+              <p id="prep-time" class="fw-bold mb-0">15 min</p>
+            </div>
+            <div>
+              <i class="fas fa-fire-burner text-danger mb-2 fs-4"></i>
+              <p class="mb-0 text-secondary">Cook Time</p>
+              <p id="cook-time" class="fw-bold mb-0">20 min</p>
+            </div>
+            <div>
+              <i class="fas fa-users text-primary mb-2 fs-4"></i>
+              <p class="mb-0 text-secondary">Servings</p>
+              <p id="servings" class="fw-bold mb-0">4 people</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7 p-4 p-lg-5">
+
+          <div class="d-flex flex-column flex-md-row justify-content-between align-items-start mb-4">
+
+
+            <div class="order-0 order-md-1 align-self-end align-self-md-center d-flex gap-2 mb-3 mb-md-0">
+              <button class="btn btn-style"><i class="fas fa-bookmark"></i></button>
+              <button class="btn btn-style"><i class="fas fa-share-alt"></i></button>
+            </div>
+
+
+            <div class="order-1 order-md-0">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span id="badges-container1" class="badge badge1 rounded-3">Easy</span>
+                <span id="badges-container2" class="badge badge2 rounded-3">American</span>
+              </div>
+
+              <h2 id="recipe-name" class="fw-bold mb-2">Beef Tacos</h2>
+
+              <p id="recipe-description" class="text-secondary fs-5">
+                Flavorful Mexican tacos with seasoned ground beef
+              </p>
+            </div>
+
+          </div>
+
+          <ul class="nav nav-tabs mb-3 d-flex flex-row flex-nowrap w-100 text-center d-md-none" id="recipeTabs"
+            role="tablist">
+            <li class="nav-item flex-fill" role="presentation">
+              <button
+                class="nav-link active d-flex align-items-center justify-content-center gap-1 px-1 py-1 text-truncate"
+                 id="ingredients-tab" data-bs-toggle="tab" data-bs-target="#ingredients"
+                type="button">
+                <i class="fas fa-list-check"></i>
+                <span class="d-inline-block text-truncate" style="max-width: 55px;">Ingredients</span>
+              </button>
+            </li>
+
+            <li class="nav-item flex-fill" role="presentation">
+              <button class="nav-link d-flex align-items-center justify-content-center gap-1 px-1 py-1 text-truncate"
+                 id="instructions-tab" data-bs-toggle="tab" data-bs-target="#instructions"
+                type="button">
+                <i class="fa-solid fa-book-open"></i>
+                <span class="d-inline-block text-truncate" style="max-width: 55px;">Instructions</span>
+              </button>
+            </li>
+
+            <li class="nav-item flex-fill" role="presentation">
+              <button class="nav-link d-flex align-items-center justify-content-center gap-1 px-1 py-1 text-truncate"
+                 id="nutrition-tab" data-bs-toggle="tab" data-bs-target="#nutrition"
+                type="button">
+                <i class="fas fa-pie-chart"></i>
+                <span class="d-inline-block text-truncate" style="max-width: 55px;">Nutrition</span>
+              </button>
+            </li>
+
+            <li class="nav-item flex-fill" role="presentation">
+              <button class="nav-link d-flex align-items-center justify-content-center gap-1 px-1 py-1 text-truncate"
+                 id="tips-tab" data-bs-toggle="tab" data-bs-target="#tips" type="button">
+                <i class="fas fa-lightbulb"></i>
+                <span class="d-inline-block text-truncate" style="max-width: 55px;">Chef's Tips</span>
+              </button>
+            </li>
+          </ul>
+
+          <ul class="nav nav-tabs mb-3 d-flex flex-row flex-nowrap w-100 text-center d-none d-md-flex" id="recipeTabs"
+            role="tablist">
+            <li class="nav-item flex-fill" role="presentation">
+              <button class="nav-link active d-flex align-items-center justify-content-center gap-2"
+                id="ingredients-tab" data-bs-toggle="tab" data-bs-target="#ingredients" type="button">
+                <i class="fas fa-list-check"></i> Ingredients
+              </button>
+            </li>
+            <li class="nav-item flex-fill" role="presentation">
+              <button class="nav-link d-flex align-items-center justify-content-center gap-2" id="instructions-tab"
+                data-bs-toggle="tab" data-bs-target="#instructions" type="button">
+                <i class="fa-solid fa-book-open"></i> Instructions
+              </button>
+            </li>
+            <li class="nav-item flex-fill" role="presentation">
+              <button class="nav-link d-flex align-items-center justify-content-center gap-2" id="nutrition-tab"
+                data-bs-toggle="tab" data-bs-target="#nutrition" type="button">
+                <i class="fas fa-pie-chart"></i> Nutrition
+              </button>
+            </li>
+            <li class="nav-item flex-fill" role="presentation">
+              <button class="nav-link d-flex align-items-center justify-content-center gap-2" id="tips-tab"
+                data-bs-toggle="tab" data-bs-target="#tips" type="button">
+                <i class="fas fa-lightbulb"></i> Chef's Tips
+              </button>
+            </li>
+          </ul>
+
+          <hr class="w-100 my-4 fw-bolder" style="height:3px; background:#E5E7EB; border:none;">
+
+          <div class="tab-content">
+            <div id="ingredients" class="tab-pane fade show active" role="tabpane">
+              <div class="p-3 p-md-4 rounded-3 ingredients-background">
+                <ul class="list-unstyled mb-0">
+                  <li class="d-flex align-items-start mb-3">
+                    <div
+                      class="flex-shrink-0 rounded-background text-white rounded-circle d-flex align-items-center justify-content-center me-3 fs-6 fw-semibold">
+                      1</div>
+                    <span>500g ground beef</span>
+                  </li>
+                  <li class="d-flex align-items-start mb-3">
+                    <div
+                      class="flex-shrink-0 rounded-background text-white rounded-circle d-flex align-items-center justify-content-center me-3 fs-6 fw-semibold">
+                      2</div>
+                    <span>8 taco shells</span>
+                  </li>
+                  <li class="d-flex align-items-start mb-3">
+                    <div
+                      class="flex-shrink-0 rounded-background text-white rounded-circle d-flex align-items-center justify-content-center me-3 fs-6 fw-semibold">
+                      3</div>
+                    <span>1 onion, diced</span>
+                  </li>
+                  <li class="d-flex align-items-start mb-3">
+                    <div
+                      class="flex-shrink-0 rounded-background text-white rounded-circle d-flex align-items-center justify-content-center me-3 fs-6 fw-semibold">
+                      4</div>
+                    <span>2 tablespoons taco seasoning</span>
+                  </li>
+                  <li class="d-flex align-items-start mb-3">
+                    <div
+                      class="flex-shrink-0 rounded-background text-white rounded-circle d-flex align-items-center justify-content-center me-3 fs-6 fw-semibold">
+                      5</div>
+                    <span>Shredded lettuce</span>
+                  </li>
+                  <li class="d-flex align-items-start mb-3">
+                    <div
+                      class="flex-shrink-0 rounded-background text-white rounded-circle d-flex align-items-center justify-content-center me-3 fs-6 fw-semibold">
+                      6</div>
+                    <span>Diced tomatoes</span>
+                  </li>
+                  <li class="d-flex align-items-start mb-3">
+                    <div
+                      class="flex-shrink-0 rounded-background text-white rounded-circle d-flex align-items-center justify-content-center me-3 fs-6 fw-semibold">
+                      7</div>
+                    <span>Shredded cheddar cheese</span>
+                  </li>
+                  <li class="d-flex align-items-start mb-3">
+                    <div
+                      class="flex-shrink-0 rounded-background text-white rounded-circle d-flex align-items-center justify-content-center me-3 fs-6 fw-semibold">
+                      8</div>
+                    <span>Sour cream</span>
+                  </li>
+                  <li class="d-flex align-items-start mb-3">
+                    <div
+                      class="flex-shrink-0 rounded-background text-white rounded-circle d-flex align-items-center justify-content-center me-3 fs-6 fw-semibold">
+                      9</div>
+                    <span>Salsa</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div id="instructions" class="tab-pane fade" role="tabpanel">
+              <div id="instructions-list" class="list-group">
+
+                <div class="d-flex mb-4 align-items-start">
+                  <div
+                    class="rounded-background2 text-white rounded-4 d-flex align-items-center justify-content-center fw-bold flex-shrink-0">1</div>
+                  <div class="flex-grow-1 ms-3">
+                    <p class="mb-0 text-secondary mt-2">Heat a large skillet over medium-high heat. Cook ground beef
+                      until browned.</p>
+                  </div>
+                </div>
+
+                <div class="d-flex mb-4 align-items-start">
+                  <div
+                    class="rounded-background2 text-white rounded-4 d-flex align-items-center justify-content-center fw-bold flex-shrink-0">2</div>
+                  <div class="flex-grow-1 ms-3">
+                    <p class="mb-0 text-secondary mt-2">Add diced onion and cook until softened, about 5 minutes.</p>
+                  </div>
+                </div>
+
+                <div class="d-flex mb-4 align-items-start">
+                  <div
+                    class="rounded-background2 text-white rounded-4 d-flex align-items-center justify-content-center fw-bold flex-shrink-0">3</div>
+                  <div class="flex-grow-1 ms-3">
+                    <p class="mb-0 text-secondary mt-2">Stir in taco seasoning and 1/2 cup water. Simmer for 10 minutes.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="d-flex mb-4 align-items-start">
+                  <div
+                    class="rounded-background2 text-white rounded-4 d-flex align-items-center justify-content-center fw-bold flex-shrink-0">4</div>
+                  <div class="flex-grow-1 ms-3">
+                    <p class="mb-0 text-secondary mt-2">Warm taco shells according to package directions.</p>
+                  </div>
+                </div>
+
+                <div class="d-flex mb-4 align-items-start">
+                  <div
+                    class="rounded-background2 text-white rounded-4 d-flex align-items-center justify-content-center fw-bold flex-shrink-0">5</div>
+                  <div class="flex-grow-1 ms-3">
+                    <p class="mb-0 text-secondary mt-2">Fill each shell with seasoned beef.</p>
+                  </div>
+                </div>
+
+                <div class="d-flex mb-4 align-items-start">
+                  <div
+                    class="rounded-background2 text-white rounded-4 d-flex align-items-center justify-content-center fw-bold flex-shrink-0">6</div>
+                  <div class="flex-grow-1 ms-3">
+                    <p class="mb-0 text-secondary mt-2">Top with lettuce, tomatoes, cheese, sour cream, and salsa. Serve
+                      immediately.</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div id="nutrition" class="tab-pane fade"  role="tabpanel">
+              <div class="row g-3">
+
+
+                <div class="col-12 col-md-6">
+                  <div class="d-flex justify-content-between align-items-center p-3 bg-light rounded-3">
+                    <div class="d-flex align-items-center">
+                      <div class="d-flex align-items-center justify-content-center rounded-2 me-3 p-3 nutritionstyle1">
+                        <i class="fas fa-fire fs-6"></i>
+                      </div>
+                      <span class="text-secondary fw-medium fs-6">Calories</span>
+                    </div>
+                    <span class="fw-bold fs-6" id="calories-value">420 kcal</span>
+                  </div>
+                </div>
+
+
+                <div class="col-12 col-md-6">
+                  <div class="d-flex justify-content-between align-items-center p-3 bg-light rounded-3">
+                    <div class="d-flex align-items-center">
+                      <div
+                        class="d-flex align-items-center justify-content-center bg-primary-subtle text-primary rounded-2 me-3 p-3">
+                        <i class="fas fa-dumbbell fs-6"></i>
+                      </div>
+                      <span class="text-secondary fw-medium fs-6">Protein</span>
+                    </div>
+                    <span class="fw-bold fs-6" id="protein-value">26g</span>
+                  </div>
+                </div>
+
+
+                <div class="col-12 col-md-6">
+                  <div class="d-flex justify-content-between align-items-center p-3 bg-light rounded-3">
+                    <div class="d-flex align-items-center">
+                      <div
+                        class="d-flex align-items-center justify-content-center bg-warning-subtle rounded-2 me-3 p-3 nutritionstyle2">
+                        <i class="fas fa-wheat-awn fs-6"></i>
+                      </div>
+                      <span class="text-secondary fw-medium fs-6">Carbohydrates</span>
+                    </div>
+                    <span class="fw-bold fs-6" id="carbs-value">32g</span>
+                  </div>
+                </div>
+
+
+                <div class="col-12 col-md-6">
+                  <div class="d-flex justify-content-between align-items-center p-3 bg-light rounded-3">
+                    <div class="d-flex align-items-center">
+                      <div class="d-flex align-items-center justify-content-center rounded-2 me-3 p-3 nutritionstyle3">
+                        <i class="fas fa-droplet fs-6"></i>
+                      </div>
+                      <span class="text-secondary fw-medium fs-6">Fat</span>
+                    </div>
+                    <span class="fw-bold fs-6" id="fat-value">20g</span>
+                  </div>
+                </div>
+
+
+                <div class="col-12 col-md-6">
+                  <div class="d-flex justify-content-between align-items-center p-3 bg-light rounded-3">
+                    <div class="d-flex align-items-center">
+                      <div class="d-flex align-items-center justify-content-center rounded-2 me-3 p-3 nutritionstyle4">
+                        <i class="fas fa-seedling fs-6"></i>
+                      </div>
+                      <span class="text-secondary fw-medium fs-6">Fiber</span>
+                    </div>
+                    <span class="fw-bold fs-6" id="fiber-value">4g</span>
+                  </div>
+                </div>
+
+
+                <div class="col-12 col-md-6">
+                  <div class="d-flex justify-content-between align-items-center p-3 bg-light rounded-3">
+                    <div class="d-flex align-items-center">
+                      <div
+                        class="d-flex align-items-center justify-content-center rounded-2 me-3 p-3 nutritionstyle5 tip-box">
+                        <i class="fas fa-cube fs-6"></i>
+                      </div>
+                      <span class="text-secondary fw-medium fs-6">Sodium</span>
+                    </div>
+                    <span class="fw-bold fs-6" id="sodium-value">780mg</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div id="tips" class="tab-pane fade"  role="tabpanel">
+              <div id="tips-list" class="d-flex flex-column gap-3">
+                <div
+                  class="d-flex align-items-start p-3 bg-warning bg-opacity-10 rounded-3 border-start border-4 border-warning">
+                  <i class="fa-solid fa-circle-check fs-4 me-3 mt-1 bgorange "></i>
+                  <p class="text-secondary mb-0">Drain excess fat from beef for healthier tacos</p>
+                </div>
+
+                <div
+                  class="d-flex align-items-start p-3 bg-warning bg-opacity-10 rounded-3 border-start border-4 border-warning">
+                  <i class="fa-solid fa-circle-check fs-4 me-3 mt-1 bgorange "></i>
+                  <p class="text-secondary mb-0">Warm shells in oven for better texture</p>
+                </div>
+
+                <div
+                  class="d-flex align-items-start p-3 bg-warning bg-opacity-10 rounded-3 border-start border-4 border-warning">
+                  <i class="fa-solid fa-circle-check fs-4 me-3 mt-1 bgorange "></i>
+                  <p class="text-secondary mb-0">Prepare all toppings before cooking beef</p>
+                </div>
+
+                <div
+                  class="d-flex align-items-start p-3 bg-warning bg-opacity-10 rounded-3 border-start border-4 border-warning">
+                  <i class="fa-solid fa-circle-check fs-4 me-3 mt-1 bgorange "></i>
+                  <p class="text-secondary mb-0">Use ground turkey for a lighter option</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class=" pt-3 border-top">
+            <button id="try-btn" class="btn btn-gradient text-white rounded-3 px-3 py-2" onclick="showNextRecipe()">
+              <i class="fas fa-rotate me-2"></i> Try Another Recipe
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+  <!--------------- End Main-Content Section --------------->
+  <script src="javascript/bootstrap.bundle.min.js"></script>
+  <script src="javascript/script.js"></script>
+</body>
+
+</html>
